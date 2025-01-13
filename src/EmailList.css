@@ -1,0 +1,34 @@
+.emailList {
+  flex: 1;
+  overflow: scroll;
+}
+
+
+/* To hide the scrollbar for Chrome, Safara, Opera */
+
+.emailList__settings {
+  /*Display stuff*/
+  display: flex;
+  justify-content: space-between;
+  /*Positioning stuff*/
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  /*Box model stuff*/
+  padding-right: 10px;
+  border-bottom: 1px solid whitesmoke;
+  background-color: white;
+}
+
+.emailList__sections {
+  position: sticky;
+  top: 0;
+  display: flex;
+  background-color: white;
+  border-bottom: 1px solid whitesmoke;
+  z-index: 999;
+}
+
+.emailList__list {
+  padding-bottom: 20%;
+}
