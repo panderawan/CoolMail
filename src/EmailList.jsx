@@ -39,7 +39,7 @@ function EmailList() {
     try {
       const date = new Date(timestamp * 1000);
       return new Intl.DateTimeFormat("fr-FR", {
-        weekday: "long",
+        weekday: "short", // Display only the first three letters of the day
         day: "2-digit",
         month: "long",
         year: "numeric",

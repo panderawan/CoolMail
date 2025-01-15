@@ -43,7 +43,7 @@
   padding-right: 15px;
   font-size: 9px;
   font-weight: bold;
-  text-transform: capitalize;
+  /* text-transform: capitalize; */
 }
 
 .emailRow__description {
