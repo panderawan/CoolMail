@@ -3,6 +3,7 @@ import "./Header.css";
 import { Avatar, IconButton } from "@mui/material";
 import { logout, selectUser } from "./features/userSlice";
 import { useDispatch, useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
 import AppsIcon from "@mui/icons-material/Apps";
 import { ArrowDropDown } from "@mui/icons-material";
@@ -16,6 +17,11 @@ import { signOut } from "firebase/auth";
 function Header() {
   const user = useSelector(selectUser);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate("/");
+  };
 
   const logUserOut = () => {
     signOut(auth)
@@ -24,7 +30,7 @@ function Header() {
   };
   return (
     <div className='header'>
-      <div className='header__left'>
+      <div className='header__left' onClick={handleClick}>
         <IconButton>
           <MenuIcon />
         </IconButton>
